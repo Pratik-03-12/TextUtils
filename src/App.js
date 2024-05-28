@@ -5,11 +5,11 @@ import Navbar from "./components/navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 import React from "react"
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 
 
 
@@ -42,16 +42,17 @@ const toggleMode=()=>{
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container my-3">
-      <Routes>
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/" element={<TextForm showalert={showAlert} heading="Enter your text to analyze" mode={mode}/>}/>
-      </Routes>
+      {/* <Routes> */}
+          {/* <Route exact path="/about" element={<About/>}/> */}
+          {/* <Route exact path="/" element={<TextForm showalert={showAlert} heading="Enter your text to analyze" mode={mode}/>}/> */}
+      {/* </Routes> */}
+      <TextForm showalert={showAlert} heading="Enter your text to analyze" mode={mode}/>
       </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
