@@ -47,8 +47,8 @@ const toggleMode=()=>{
       <Alert alert={alert}/>
       <div className="container my-3">
       <Routes>
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/" element={<TextForm showalert={showAlert} heading="Enter your text to analyze" mode={mode}/>}/>
+          <Route exact path="/about" element={<About mode={mode}/>}/>
+          <Route exact path="/" element={<TextForm showalert={showAlert} heading="Try TextUtils - Word Counter, Character Counter" mode={mode}/>}/>
       </Routes>
       {/* <TextForm showalert={showAlert} heading="Enter your text to analyze" mode={mode}/> */}
       </div>
